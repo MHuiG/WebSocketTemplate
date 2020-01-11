@@ -19,7 +19,6 @@
         ws.send("发送数据123456");
         console.log("数据发送中...");
     };
-
     // 接收服务端数据时触发事件
     ws.onmessage = function (evt) {
         var received_msg = evt.data;
