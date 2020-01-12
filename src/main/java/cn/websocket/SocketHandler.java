@@ -5,14 +5,13 @@ import org.springframework.web.socket.*;
 public class SocketHandler implements WebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        System.out.println("建立WebSocket连接成功！");
-        session.sendMessage(new TextMessage("建立WebSocket连接成功！"));
+        System.out.println("WebSocket连接成功！");
     }
 
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         System.out.println("服务端已经接收到消息:"+message.toString());
-        message = new TextMessage("服务端已经接收到消息:"+message.toString());
+        message = new TextMessage("123456");
         session.sendMessage(message);
     }
 
